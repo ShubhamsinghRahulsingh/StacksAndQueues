@@ -5,12 +5,13 @@ class Program
     public static void Main(string[] args)
     {
         Stacks stack = new Stacks();
+        Queue queue = new Queue();
         Console.WriteLine("Welcome to the Stacks And Queues Operations");
         bool flag = true;
         while (flag)
         {
             Console.WriteLine("-----------------------------------------");
-            Console.WriteLine("1.Create Stack\n2.PeekAndPop\n3.Exit");
+            Console.WriteLine("1.Create Stack\n2.PeekAndPop\n3.Create Queue\n4.Exit");
             Console.Write("Enter your choice: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -28,6 +29,12 @@ class Program
                     stack.IsEmpty();
                     break;
                 case 3:
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    queue.Display();
+                    break;
+                case 4:
                     flag = false;
                     break;
             }
