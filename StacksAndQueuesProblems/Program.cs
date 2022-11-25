@@ -11,7 +11,7 @@ class Program
         while (flag)
         {
             Console.WriteLine("-----------------------------------------");
-            Console.WriteLine("1.Create Stack\n2.PeekAndPop\n3.Create Queue\n4.Exit");
+            Console.WriteLine("1.Create Stack\n2.PeekAndPop\n3.Create Queue\n4.Dequeue\n5.Exit");
             Console.Write("Enter your choice: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -35,6 +35,12 @@ class Program
                     queue.Display();
                     break;
                 case 4:
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    queue.Dequeue();
+                    break;
+                case 5:
                     flag = false;
                     break;
             }
